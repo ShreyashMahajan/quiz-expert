@@ -1,0 +1,17 @@
+
+.sidebar {
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    width: 15rem;
+    grid-area: sidebar;
+}
+
+.item-category {
+     padding: 1.5rem;
+     margin: 1rem;
+     border-radius: 1rem;
+}
+
+.category-active {
+    border: 2px solid var(--body-bg-color);
+}
