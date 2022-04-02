@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import { CategoryCard } from '../../components/categoryCard/categoryCard';
 import { Navbar } from '../../components/navbar/navbar';
 import { Sidebar } from '../../components/sidebar/sidebar';
@@ -18,6 +19,7 @@ export const Home = () => {
                         <CategoryCard />
                     </div>
                 </div>
+                <NavLink to='/questionPage'>Go to question page</NavLink>
             </main>
             <SidebarBottom />
 
