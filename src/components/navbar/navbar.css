@@ -1,0 +1,54 @@
+ 
+ 
+
+.navbar {
+    grid-area: navbar;
+    border-bottom: 1.5px solid var(--body-bg-color);
+}
+
+ /* navbar css */
+ .nav-container {
+     display: flex ;
+     justify-content: space-between;
+     flex-wrap: wrap;
+     padding: 1rem;
+     background-color: var(--primary-color);
+     border-bottom-right-radius: 1rem;
+ }
+
+ .nav__heading {
+     font-size: xx-large;
+     font-weight: bold;
+ }
+
+ .nav--user-auth {
+     display: flex;
+     column-gap: 5px;
+     flex-wrap: wrap;
+ }
+
+ .btn {
+     padding: 8px 1rem;
+     border-radius: 2rem;
+     font-size: medium;
+ }
+
+ .btn--signUp {
+     background-color: var(--signUp-color);
+     color: var(--secondary-text-color);
+ }
+
+ .nav--user-info {
+     display: flex;
+     align-items: center;
+     column-gap: 1rem;
+     color: white;
+ }
+
+.user--name {
+     font-size: large;
+}
+
+.avatar {
+    border: 2px solid black;
+}
