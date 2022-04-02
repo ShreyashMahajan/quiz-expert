@@ -8,6 +8,8 @@
   --button-color:  #2563eb;
   --white-color: white;
   --body-bg-color: #1f2937 ;
+  --option-color: rgb(239, 14, 14) ;
+  --ans-correct-color: rgb(33, 133, 33) ;
 }
 
 /* reset css  */
@@ -80,7 +82,7 @@ border-spacing: 0;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--white-color);
 }
 
 .App-link {
