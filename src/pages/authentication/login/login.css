@@ -1,0 +1,98 @@
+:root {
+    --forgot-pass-color: rgb(3, 3, 199);
+    --white-color: white;
+    --btn-bg-color: rgb(66, 66, 245);
+}
+
+body {
+    box-sizing: border-box;
+}
+
+.form__heading {
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+.login-container {
+    display: grid;
+    grid-template-areas: 
+    "navbar"
+    "main";
+    grid-template-rows: 6rem auto  ;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--white-color);
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--primary-color);
+    padding: 2rem;
+    row-gap: 8px;
+    border-radius: 1rem;
+}
+
+.label {
+    font-size: x-large;
+}
+
+.input-data {
+    box-sizing: border-box;
+   width: 20rem;
+   padding: 10px;
+   border: 1px solid var(--primary-color);
+   border-radius: 1rem;
+}
+
+.user-info-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.user-remember {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.user-remember__heading {
+    font-size: small;
+    padding: 0;
+}
+
+#userRemember {
+    margin: 0;
+    padding: 0;
+}
+
+.forgot-pass--link {
+    color: var(--forgot-pass-color);
+    text-decoration: none;
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+.btn-user--login {
+    padding: 8px;
+    background-color: var(--btn-bg-color);
+    color: var(--white-color);
+    border-radius: 1rem;
+    font-size: medium;
+}
+
+.user-new-account {
+    margin: 1rem;
+    text-align: center;
+}
