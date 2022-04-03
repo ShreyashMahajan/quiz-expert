@@ -1,0 +1,22 @@
+
+
+.result-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    width: 80%;
+}
+
+.result__heading {
+    font-size: 3rem;
+}
+
+.result-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.result-info--text {
+    font-size: x-large;
+}

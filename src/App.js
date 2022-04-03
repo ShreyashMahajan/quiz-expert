@@ -3,8 +3,8 @@ import './App.css';
 import { Login } from './pages/authentication/login/login';
 import { Home } from './pages/home/home';
 import { QuestionBlock } from './pages/questionPage/questionPage';
+import { Result } from './pages/result/result';
 import { Rules } from './pages/rules/rules';
-// import { Login } from './pages/authentication/login/login';
 
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
        <Route path='/login' element={ <Login /> } />
        <Route path='/questionPage' element={ <QuestionBlock />} />
        <Route path='/rules' element={ <Rules />} />
+       <Route path='/result' element={ <Result />} />
 
      </Routes>
 
