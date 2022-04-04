@@ -19,7 +19,7 @@ export const Home = () => {
                         <CategoryCard />
                     </div>
                 </div>
-                <NavLink to='/questionPage'>Go to question page</NavLink>
+                <NavLink to='/result'>Go to result</NavLink>
             </main>
             <SidebarBottom />
 
