@@ -10,7 +10,6 @@ const QuestionProvider = ({ children }) => {
         (async () => {
             try {
                 const Response = await axios.get('/api/quizQuestions');
-                console.log(Response.data)
                 setQuizData(Response.data.quizQuestions);
 
             } catch (error) {
@@ -18,8 +17,6 @@ const QuestionProvider = ({ children }) => {
             }
         })()
     }, []);
-
-    console.log('quiz data', quizData)
 
     return (
         <QuestionContext.Provider value={{ quizData }}>
