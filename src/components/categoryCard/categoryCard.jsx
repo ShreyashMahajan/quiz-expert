@@ -1,11 +1,23 @@
 import '../categoryCard/categoryCard.css';
-import historyImg from '../../assets/images/history.jpg';
+import { useQuestion } from '../../context/questionContext/questionContext';
+import { NavLink } from 'react-router-dom';
 
 export const CategoryCard = () => {
+    const { quizData } = useQuestion();
+
     return (
-        <div className='card-container'>
-            <img src={historyImg} alt="category" className="category__img" />
-            <h2 className="category--title"> History </h2>
-        </div>
+        quizData.map(quizItem => {
+            return (
+                <div key={quizItem._id}>
+                    <NavLink to='/rules'>
+                        <div className='card-container'>
+                            <img src={quizItem.image} alt="category" className="category__img" />
+                            <h2 className="category--title"> {quizItem.category} </h2>
+                        </div>
+                    </NavLink>
+                </div>
+            )
+        })
+
     )
 }

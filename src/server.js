@@ -1,13 +1,251 @@
 import { createServer } from "miragejs";
+import { v4 as uuidv4 } from 'uuid';
+import technology from '../src/assets/images/technology.jpg';
+import history from '../src/assets/images/history.jpg';
+import science from '../src/assets/images/science.jpg';
 
-createServer({
+
+createServer( {
   routes() {
-    this.namespace = "api";
+      this.namespace = 'api';
+      this.get('/quizQuestions', () => {
+          return {
+              quizQuestions: [
+                 {   
+                     _id: uuidv4() ,
+                     category: 'history',
+                     image: history,
+                     questions: [
+                         {
+                             _id: uuidv4(),
+                             question: 'Who was the Viceroy of India at the time of Jallianwala Bagh massacre?',
+                             answer: 'Lord Chelmsford',
+                             option1: 'Lord Lytton', option2: 'Lord Irwin',
+                             option3: 'Lord Chelmsford', option4: 'None of these',
+                         },
+                         {
+                          _id: uuidv4(),
+                          question: 'Who introduced subsidiary Alliance?',
+                          answer: 'Lord Wellesley',
+                          option1: 'John Shore', option2: 'Lord Wellesley',
+                          option3: 'Alured Clarke', option4: 'None of these',
+                         },
+                         {
+                          _id: uuidv4(),
+                          question: 'Which of the following was the first state to come under the grip of Subsidiary Alliance?',
+                          answer: 'Hyderabad',
+                          option1: 'Awadh', option2: 'Mysore',
+                          option3: 'Hyderabad', option4: 'None of these',
+                         },
+                         {
+                          _id: uuidv4(),
+                          question: 'When was the Regulating Act passed?',
+                          answer: '1773',
+                          option1: '1773', option2: '1743',
+                          option3: '1783', option4: 'None of these',
+                         },
+                         {
+                          _id: uuidv4(),
+                          question: 'Where was the Supreme Court established by the Regulating Act of 1773?',
+                          answer: 'Calcutta',
+                          option1: 'Madras', option2: 'Calcutta',
+                          option3: 'New Delhi', option4: 'None of these',
+                         },
+                         {
+                          _id: uuidv4(),
+                          question: 'Where was the first English factory setup in India?',
+                          answer: 'Surat',
+                          option1: 'Madras', option2: 'Calcutta',
+                          option3: 'Surat', option4: 'None of these',
+                      },
+                      {
+                       _id: uuidv4(),
+                       question: 'Who translated Bhagavad Gita into English?',
+                       answer: 'Charles Wilkins',
+                       option1: 'John Macpherson', option2: 'Charles Wilkins',
+                       option3: 'Warren Hastings', option4: 'None of these',
+                      },
+                      {
+                       _id: uuidv4(),
+                       question: 'Which of the following governor introduced Permanent Settlement in Bengal and Bihar?',
+                       answer: 'Lord Cornwallis',
+                       option1: 'Lord Cornwallis', option2: 'John Shore',
+                       option3: 'Sir George Barlow', option4: 'None of these',
+                      },
+                      {
+                       _id: uuidv4(),
+                       question: 'Who established Free India Society in England?',
+                       answer: 'Vinayak Damodar Savarkar',
+                       option1: 'Dadabhai Naoroji', option2: 'Shyamji Krishna Varma',
+                       option3: 'Vinayak Damodar Savarkar', option4: 'None of these',
+                      },
+                      {
+                       _id: uuidv4(),
+                       question: 'Who is usually known as the Father of civil services in India?',
+                       answer: 'Warren Hastings',
+                       option1: 'Warren Hastings', option2: 'John Shore',
+                       option3: 'Lord Dalhousie.', option4: 'None of these',
+                      },
+                     ],
+                 },
 
-    this.get("/data", () => {
-      return {
-        data: [
-            
-        ]
-  }
-})}})
+                 {   
+                  _id: uuidv4() ,
+                  category: 'science',
+                  image: science,
+                  questions: [
+                      {
+                          _id: uuidv4(),
+                          question: 'What is the full form of ASLV?',
+                          answer: 'Augmented Satellite Launch Vehicle',
+                          option1: ' Augmented Satellite Launch Vehicle', option2: 'Automatic Satellite Launch Vehicle',
+                          option3: 'Aero Space Launch Vehicle', option4: 'Area Satellite Launch Vehicle',
+                      },
+                      {
+                       _id: uuidv4(),
+                       question: 'Which is Indias first experimental satellite launch vehicle?',
+                       answer: 'SLV 3',
+                       option1: 'ASLV', option2: 'GSLV',
+                       option3: 'SLV 3', option4: 'None of these',
+                      },
+                      {
+                       _id: uuidv4(),
+                       question: 'Pedology is the science related to the study of',
+                       answer: 'soil',
+                       option1: 'atmosphere', option2: 'soil',
+                       option3: 'pollutants', option4: 'seeds',
+                      },
+                      {
+                       _id: uuidv4(),
+                       question: 'Who is the president of the Council of Scientific and Industrial Research?',
+                       answer: 'Prime Minister of India',
+                       option1: 'President of India', option2: 'Vice-President of India',
+                       option3: 'Prime Minister of India', option4: 'Union Minister of Science and Technology',
+                      },
+                      {
+                       _id: uuidv4(),
+                       question: 'Indias first satellite Aryabhata was launched from',
+                       answer: 'Soviet Union',
+                       option1: 'Soviet Union', option2: 'America',
+                       option3: 'India', option4: 'Israel',
+                      },
+                      {
+                       _id: uuidv4(),
+                       question: 'Which project is a joint venture of India and France?',
+                       answer: 'Maitri Missile Project',
+                       option1: 'Maitri Missile Project', option2: 'Nuclear missile project',
+                       option3: 'Cog missile project', option4: 'InFra missile project',
+                   },
+                   {
+                    _id: uuidv4(),
+                    question: 'The optimum dissolved oxygen level (in mg/litre) required for survival of aquatic organisms is',
+                    answer: '4-6',
+                    option1: '4-6', option2: '2-4',
+                    option3: '8-10', option4: '12-16',
+                   },
+                   {
+                    _id: uuidv4(),
+                    question: 'Which country developed Julang-2 ballistic missile?',
+                    answer: 'China',
+                    option1: 'U.K.', option2: 'Nepal',
+                    option3: 'China', option4: 'Malaysia',
+                   },
+                   {
+                    _id: uuidv4(),
+                    question: 'ISRO was formed in …………..',
+                    answer: '1969',
+                    option1: '1963', option2: '1969',
+                    option3: '1972', option4: '1985',
+                   },
+                   {
+                    _id: uuidv4(),
+                    question: 'Angle of friction and angle of repose are',
+                    answer: 'equal to each other',
+                    option1: 'equal to each other', option2: 'not equal to each other',
+                    option3: 'proportional to each other', option4: 'None of the above',
+                   },
+                  ],
+                 },
+
+                 {   
+                  _id: uuidv4() ,
+                  category: 'technology',
+                  image: technology,
+                  questions: [
+                      {
+                          _id: uuidv4(),
+                          question: 'What is part of a database that holds only one type of information?',
+                          answer: 'Field',
+                          option1: 'Report', option2: 'Field',
+                          option3: 'Record', option4: 'File',
+                      },
+                      {
+                       _id: uuidv4(),
+                       question: 'OS computer abbreviation usually means ?',
+                       answer: 'Operating System',
+                       option1: 'Order of Significance', option2: 'Open Software',
+                       option3: 'Operating System', option4: 'Optical Sensor',
+                      },
+                      {
+                       _id: uuidv4(),
+                       question: 'In which decade was the SPICE simulator introduced?',
+                       answer: '1970s',
+                       option1: '1950s', option2: '1960s',
+                       option3: '1970s', option4: '1980s',
+                      },
+                      {
+                       _id: uuidv4(),
+                       question: `Most modern TV's draw power even if turned off. The circuit the power is used in does what function?`,
+                       answer: 'Remote control',
+                       option1: 'Sound', option2: 'Remote control',
+                       option3: 'Color balance', option4: 'High voltage',
+                      },
+                      {
+                       _id: uuidv4(),
+                       question: 'Which is a type of Electrically-Erasable Programmable Read-Only Memory?',
+                       answer: 'Flash',
+                       option1: 'Flash', option2: 'Flange',
+                       option3: 'Fury', option4: 'FRAM',
+                      },
+                      {
+                       _id: uuidv4(),
+                       question: 'The purpose of choke in tube light is ?',
+                       answer: 'To increase the voltage momentarily',
+                       option1: 'To decrease the current', option2: 'To increase the current',
+                       option3: 'To decrease the voltage momentarily', option4: 'To increase the voltage momentarily',
+                   },
+                   {
+                    _id: uuidv4(),
+                    question: 'Who developed Yahoo?',
+                    answer: 'David Filo & Jerry Yang',
+                    option1: 'David Filo & Jerry Yang', option2: 'Vint Cerf & Robert Kahn',
+                    option3: 'Steve Case & Jeff Bezos', option4: 'Dennis Ritchie & Ken Thompson',
+                   },
+                   {
+                    _id: uuidv4(),
+                    question: 'What frequency range is the High Frequency band?',
+                    answer: '3 to 30 MHz',
+                    option1: '100 kHz', option2: '1 GHz',
+                    option3: '30 to 300 MHz', option4: '3 to 30 MHz',
+                   },
+                   {
+                    _id: uuidv4(),
+                    question: `'DB' computer abbreviation usually means ?`,
+                    answer: 'Database',
+                    option1: 'Database', option2: 'Double Byte',
+                    option3: 'Data Block', option4: 'Driver Boot',
+                   },
+                   {
+                    _id: uuidv4(),
+                    question: 'Who created Pretty Good Privacy (PGP)?',
+                    answer: 'Phil Zimmermann',
+                    option1: 'Phil Zimmermann', option2: 'Tim Berners-Lee',
+                    option3: 'Marc Andreessen', option4: 'Ken Thompson',
+                   },
+                  ],
+                 },
+              ]
+          }
+      })
+  },
+})
