@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router-dom';
 import { CategoryCard } from '../../components/categoryCard/categoryCard';
 import { Navbar } from '../../components/navbar/navbar';
 import { Sidebar } from '../../components/sidebar/sidebar';
@@ -15,11 +14,8 @@ export const Home = () => {
                     <h1 className='category__heading'> Categories </h1>
                     <div className='category-wrapper'>
                         <CategoryCard />
-                        <CategoryCard />
-                        <CategoryCard />
                     </div>
                 </div>
-                <NavLink to='/result'>Go to result</NavLink>
             </main>
             <SidebarBottom />
 
