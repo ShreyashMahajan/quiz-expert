@@ -6,7 +6,7 @@ export const Navbar = () => {
     return (
         <div className="navbar">
             <div className="nav-container">
-                <NavLink to='/'><h3 className="nav__heading remove--underline"> Quizy </h3></NavLink>
+                <NavLink to='/'><h3 className="nav__heading remove--underline"> QuizExpert </h3></NavLink>
                 {true &&
                     <div className="nav--user-auth">
                         <NavLink to='/login'> <button className="btn btn--login">Login</button> </NavLink>
