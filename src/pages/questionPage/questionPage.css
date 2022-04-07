@@ -23,6 +23,7 @@
     flex-direction: column;
     width: 80%;
     justify-content: center;
+    align-items: center;
     row-gap: 1rem;
 }
 
@@ -31,6 +32,7 @@
     border-radius: 1rem;
     border: 2px solid var(--primary-color);
     font-size: large;
+    width: 15rem;
 }
 
 .ques-action {

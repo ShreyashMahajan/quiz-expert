@@ -1,9 +1,9 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import axios from 'axios';
 
-const QuestionContext = createContext(null);
+const DataContext = createContext(null);
 
-const QuestionProvider = ({ children }) => {
+const DataProvider = ({ children }) => {
     const [quizData, setQuizData] = useState([]);
 
     useEffect(() => {
@@ -19,12 +19,12 @@ const QuestionProvider = ({ children }) => {
     }, []);
 
     return (
-        <QuestionContext.Provider value={{ quizData }}>
+        <DataContext.Provider value={{ quizData }}>
             {children}
-        </QuestionContext.Provider>
+        </DataContext.Provider>
     )
 }
 
-const useQuestion = () => useContext(QuestionContext);
+const useData = () => useContext(DataContext);
 
-export { useQuestion, QuestionProvider };
+export { useData, DataProvider };

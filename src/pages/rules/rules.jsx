@@ -1,8 +1,11 @@
+import { NavLink } from 'react-router-dom';
 import { Navbar } from '../../components/navbar/navbar';
 import { SidebarBottom } from '../../components/sidebarBottom/sidebarBottm';
+import { useQuestionData } from '../../context/questionDataContext';
 import '../rules/rules.css';
 
 export const Rules = () => {
+    const { dispatch } = useQuestionData();
     return (
         <div>
             <Navbar />
@@ -18,7 +21,7 @@ export const Rules = () => {
                         <li className="rule-content">There will be no negative point for skiping the question</li>
                     </ul>
                     <h1 className="rule--title-major">All the Best!</h1>
-                    <button className="btn--start">Start Quiz</button>
+                    <NavLink to='/questionPage'> <button className="btn--start" onClick={() => dispatch({ type: 'RESET' })}>Start Quiz</button></NavLink>
                 </div>
             </main>
             <SidebarBottom />

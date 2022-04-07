@@ -5,16 +5,19 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './server';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { QuestionProvider } from './context/questionContext/questionContext';
+import { DataProvider } from './context/dataContext/dataContext';
+import { QuestionDataProvider } from './context/questionDataContext';
 
 
 const root =  ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
   <Router>
-  <QuestionProvider>
+  <DataProvider>
+  <QuestionDataProvider>
   <App />
-  </QuestionProvider>
+  </QuestionDataProvider>
+  </DataProvider>
   </Router>
 </React.StrictMode>
 );
