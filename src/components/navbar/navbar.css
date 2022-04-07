@@ -52,3 +52,7 @@
 .avatar {
     border: 2px solid black;
 }
+
+.remove--underline {
+    text-decoration: none ;
+  }

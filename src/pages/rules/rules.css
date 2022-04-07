@@ -41,7 +41,7 @@
     padding: 8px 1.5rem;
     font-size: larger;
     background-color: var(--button-color);
-    color: var(--text-whiteColor);
+    color: var(--white-color);
     border-radius: 1.5rem;
 }
 

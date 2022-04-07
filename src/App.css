@@ -46,6 +46,9 @@ background-color:  var(--body-bg-color);
 ol, ul {
 list-style: none;
 }
+a{
+  text-decoration: none;
+}
 blockquote, q {
 quotes: none;
 }
@@ -87,6 +90,10 @@ border-spacing: 0;
 
 .App-link {
   color: #61dafb;
+}
+
+.remove--underline {
+  text-decoration: none ;
 }
 
 @keyframes App-logo-spin {
