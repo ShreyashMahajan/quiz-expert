@@ -54,6 +54,7 @@ export const SignUp = () => {
 
                     </div>
                 </div>
+
             </main>
 
         </div>
