@@ -11,8 +11,6 @@ const AuthProvider = ({ children }) => {
     const [authState, authDispatch] = useReducer(authReducer, { isUserLoggedIn: false, token: null });
     const { isUserLoggedIn } = authState;
     const navigate = useNavigate();
-    const location = useLocation();
-
 
     const login = async ({ email, password }) => {
         try {
