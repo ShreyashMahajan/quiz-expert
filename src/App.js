@@ -1,6 +1,8 @@
 import {  Route, Routes } from 'react-router-dom';
 import './App.css';
+import { RequiresAuth } from './components/requireAuth/requireAuth';
 import { Login } from './pages/authentication/login/login';
+import { SignUp } from './pages/authentication/signup/signup';
 import { Home } from './pages/home/home';
 import { QuestionBlock } from './pages/questionPage/questionPage';
 import { Result } from './pages/result/result';
@@ -11,12 +13,29 @@ function App() {
   return (
     <div className="App">
      <Routes>
-       <Route path='/' element={ <Home /> } />
+       <Route path='/' element={
+         <RequiresAuth>
+          <Home /> 
+         </RequiresAuth>
+          } />
        <Route path='/login' element={ <Login /> } />
-       <Route path='/questionPage' element={ <QuestionBlock />} />
-       <Route path='/rules' element={ <Rules />} />
-       <Route path='/result' element={ <Result />} />
-
+       <Route path='/signup' element={ <SignUp />} />
+       <Route path='/questionPage' element={
+         <RequiresAuth>
+            <QuestionBlock />
+         </RequiresAuth>
+          } />
+       <Route path='/rules' element={ 
+         <RequiresAuth>
+            <Rules />
+         </RequiresAuth>
+      } />
+       <Route path='/result' element={ 
+        <RequiresAuth>
+          <Result />
+        </RequiresAuth>
+        } />
+    
      </Routes>
 
      

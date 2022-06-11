@@ -13,13 +13,6 @@ body {
     margin: 1rem;
 }
 
-.login-container {
-    display: grid;
-    grid-template-areas: 
-    "navbar"
-    "main";
-    grid-template-rows: 6rem auto  ;
-}
 
 .link {
     text-decoration: none;
@@ -95,4 +88,8 @@ body {
 .user-new-account {
     margin: 1rem;
     text-align: center;
+}
+
+.item--link {
+    color: var(--white-color);
 }

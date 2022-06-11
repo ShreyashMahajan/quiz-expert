@@ -6,15 +6,18 @@ const DataContext = createContext(null);
 const DataProvider = ({ children }) => {
     const [quizData, setQuizData] = useState([]);
 
+
     useEffect(() => {
         (async () => {
+
             try {
-                const Response = await axios.get('/api/quizQuestions');
-                setQuizData(Response.data.quizQuestions);
+                const response = await axios.get('/api/questions');
+                setQuizData(response.data.questions);
 
             } catch (error) {
-                console.log('from here', error);
+                console.error('error while getting questions', error);
             }
+
         })()
     }, []);
 

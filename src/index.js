@@ -7,17 +7,22 @@ import './server';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { DataProvider } from './context/dataContext/dataContext';
 import { QuestionDataProvider } from './context/questionDataContext';
+import { AuthProvider } from './context/authContext';
+import { makeServer } from './server';
 
+makeServer();
 
 const root =  ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
   <Router>
+   <AuthProvider>
   <DataProvider>
   <QuestionDataProvider>
   <App />
   </QuestionDataProvider>
   </DataProvider>
+  </AuthProvider>
   </Router>
 </React.StrictMode>
 );
